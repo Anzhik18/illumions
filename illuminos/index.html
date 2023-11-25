@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuminas</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <div class="menu1">
+        <div class="logo"><img src="asset/img/logo.png" alt=""></div>
+        <div class="links">
+            <a href="">Фильмы</a>
+            <a href="">Сериалы</a>
+            <a href="">Подписка</a>
+        </div>
+<div class="acc"><a href=""><img src="asset/img/acc.png" alt=""></a></div>
+<div class="poisk">
+    <nav>
+      
+        <div class="search-box">
+        <form action="#">
+          <input type="text" placeholder="Поиск.." name="search">
+          <button type="submit"><a href=""><img src="asset/img/search.svg" alt=""></a></button>
+        </form>
+        </div>
+      </nav>
+</div>
+    </div>
+    <div class="banner1">
+        <div class="banner__zatemnenie">
+            <div class="ban-cont">
+            <div class="banner__text">
+                
+        <h1>НА ВЫДОХЕ</h1>
+        <h3>8.3    &nbsp;  &nbsp; &nbsp;  2023</h3>
+        <p>Жизнеутверждающая драма о судьбоносном знакомстве участницы боев без правил и парня в инвалидном кресле. В главной роли Елена Подкаминская</p>
+        <button><img src="asset/img/Polygon 1.png" alt=""><a href="">Смотреть</a></button>
+            </div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="zag1">
+            <h1>Популярное</h1>
+            <div class="line1"></div>
+        </div>
+        <div class="popular__row">
+            <div class="popular__row-cart">
+                <div class="popular__row-cart__img">
+                    <img src="asset/img/1.png" alt="">
+                    <h1>Нулевой пациент</h1>
+                    <p>8.1  &nbsp;  &nbsp; 2020</p>
+                    <h3>детектив </h3>
+                </div>
+                
+            </div>
+            <div class="popular__row-cart">
+                <div class="popular__row-cart__img">
+                    <img src="asset/img/2.png" alt="">
+                    <h1>Нулевой пациент</h1>
+                    <p>8.1  &nbsp;  &nbsp; 2020</p>
+                    <h3>детектив </h3>
+                </div>
+                
+            </div>
+            <div class="popular__row-cart">
+                <div class="popular__row-cart__img">
+                    <img src="asset/img/3.png" alt="">
+                    <h1>Нулевой пациент</h1>
+                    <p>8.1  &nbsp;  &nbsp; 2020</p>
+                    <h3>детектив </h3>
+                </div>
+                
+            </div>
+        </div>
+        <div class="new">
+            <main>
+         
+                <div class="slider-container">
+                <div class="slider">
+                 <div class="sl-content">
+                    <div class="sl__text">
+                
+                        <h1>НА ВЫДОХЕ</h1>
+                        <h3>8.3    &nbsp;  &nbsp; &nbsp;  2023</h3>
+                        <p>Жизнеутверждающая драма о судьбоносном знакомстве участницы боев без правил и парня в инвалидном кресле. В главной роли Елена Подкаминская</p>
+                        <button><img src="asset/img/Polygon 1.png" alt=""><a href="">Смотреть</a></button>
+                            </div>
+                   
+                 </div>
+                 <div class="sl-content">
+                    <div class="sl__text">
+                
+                        <h1>НА ВЫДОХЕ</h1>
+                        <h3>8.3    &nbsp;  &nbsp; &nbsp;  2023</h3>
+                        <p>Жизнеутверждающая драма о судьбоносном знакомстве участницы боев без правил и парня в инвалидном кресле. В главной роли Елена Подкаминская</p>
+                        <button><img src="asset/img/Polygon 1.png" alt=""><a href="">Смотреть</a></button>
+                            </div>
+                   
+                 </div>
+                </div>
+                <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+              </div>
+              </main>
+              
+              <script >// Получаем элементы слайдера
+                const slider = document.querySelector('.slider');
+                const prevButton = document.querySelector('.prev-button');
+                const nextButton = document.querySelector('.next-button');
+                const slides = Array.from(slider.querySelectorAll('.sl-content'));
+                const slideCount = slides.length;
+                let slideIndex = 0;
+                
+                // Устанавливаем обработчики событий для кнопок
+                prevButton.addEventListener('click', showPreviousSlide);
+                nextButton.addEventListener('click', showNextSlide);
+                
+                // Функция для показа предыдущего слайда
+                function showPreviousSlide() {
+                  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+                  updateSlider();
+                }
+                
+                // Функция для показа следующего слайда
+                function showNextSlide() {
+                  slideIndex = (slideIndex + 1) % slideCount;
+                  updateSlider();
+                }
+                
+                // Функция для обновления отображения слайдера
+                function updateSlider() {
+                  slides.forEach((slide, index) => {
+                    if (index === slideIndex) {
+                      slide.style.display = 'block';
+                    } else {
+                      slide.style.display = 'none';
+                    }
+                  });
+                }
+                
+                // Инициализация слайдера
+                updateSlider();</script>
+        </div>
+    </div>
+</body>
+</html>
